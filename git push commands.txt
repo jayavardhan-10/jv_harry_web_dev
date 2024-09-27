@@ -1,0 +1,25 @@
+git push commands
+
+git init
+git config --global user.name "jayavardhan-10"
+git config --global user.email "jayavardhanboguda@gmail.com"
+
+git add --all
+
+git commit -m "first release"
+
+git status
+
+git remote add origin https://github.com/jayavardhan-10/jv_harry_web_dev.git
+
+git push --set-upstream origin main
+
+
+
+
+
+git pull origin main
+
+git pull origin main --allow-unrelated-histories
+
+git push origin main
