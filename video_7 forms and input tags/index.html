@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form practice</title>
+</head>
+
+<body>
+    <h1>Enter your personal info</h1>
+
+    <form action="post">
+        <!-- This is the text box input thing -->
+        <div>
+            <!-- without the lebel it looks like this -->
+            <!-- <label for="username">Username</label> -->
+            <input type="text" id="username" name="username" placeholder="Enter your username">
+
+        </div>
+        <div>
+            <!-- with the lebel it looks like this -->
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username">
+        </div>
+
+
+
+
+
+        <!-- usage of radio tag -->
+        <!-- when you give same name for multiple inputs
+        then any one is only chosen here 
+    
+        here for example only 
+        male or female is chosen-->
+        <!-- when everything is fine here -->
+        <div>
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="male" value="male">
+
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="female" value="female">
+        </div>
+        <!-- when i mess up with the id then we cant select them by tapping on the labellllll -->
+        <div>
+            <!-- here if u tap on male1 it wont work -->
+            <label for="mafdsale1">Male1</label>
+            <input type="radio" name="gender" id="male1" value="male">
+            <!-- here even if u tap on female1 it works -->
+            <label for="female1">Female1</label>
+            <input type="radio" name="gender" id="female1" value="female">
+        </div>
+        <!-- when you mess up with the radio tag itself -->
+        <div>
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="male" value="male">
+            <!-- this doesnt have radio tag at all and now see its behaviour -->
+            <label for="female">Female</label>
+            <input type="" name="gender" id="female" value="female">
+        </div>
+
+
+
+
+
+        <!-- check box usage -->
+        <div>
+            <label for="subscribe">Wanna subscribe my channel</label>
+            <input type="checkbox" name="subscribe my channel" id="subscribe">
+
+            <!-- see even if we give same name and 2 input boxes 
+            
+            it is not like the radio here 
+            you can choose any number of the boxes out here-->
+            <label for="subscribe2">Wanna subscribe2 my channel</label>
+            <input type="checkbox" name="subscribe my channel" id="subscribe2">
+        </div>
+
+
+        <!-- using the text area thing -->
+        <div>
+            <label for="comment">Enter the text</label>
+            <textarea name="comment" id="comment" cols="500" rows="5"></textarea>
+        </div>
+        <!-- you can write something by default in that text area -->
+        <div>
+            <label for="comment">Enter the text</label>
+            <textarea name="comment" id="comment" cols="500" rows="5">Type your comment vro</textarea>
+        </div>
+
+        <!-- using select tag -->
+        <div>
+            <select name="Bike" id="bike">
+                <option value="gt">Gt</option>
+                <option value="pulsur">Pulsur</option>
+                <option value="bullet">Bullet</option>
+            </select>
+
+        </div>
+    </form>
+</body>
+
+</html>
+
+<!-- notes
+1   here 'div' is used for the line break 
+2    here 'br' tag can be used but not to use 
+    acc to harry./////
+3   see even if we give same name and 2 input boxes 
+            
+    it is not like the radio here 
+    you can choose any number of the boxes out here
+
+4   usage of br tag is not recommended by harry
+
+--> 

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red
+        {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- observe the classes here -->
+    <div class="container hello me-green red">
+        <div class="box" data-createdby="jv" data-conceptby="jvfriend">I am excited</div>
+    </div>
+
+    <script>
+        // let div = document.createElement("div");
+        // div.innerHTML = "this is my appending text <b> hello append </b>"
+        // div.setAttribute("class","created");
+        // //this div will be before container now 
+        // //top of container
+        // document.querySelector(".container").before(div);
+
+        let cont = document.querySelector(".container")
+        cont.insertAdjacentHTML("afterbegin","<b> ayyayyooo kya hogaya reyyy </b>")
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<pre>
+you will learn about:
+1) the comments in css are written as /*content*/unlike in html
+2)class selectors
+3)id selectors
+4)child selectors
+5)descendant selectors
+</pre>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css selectors</title>
+    <style>
+        div {
+            background-color: aqua;
+            /* you keep this or you dont..
+            nothing matters as the 
+            primary one to be considered will be the 
+            classes and ids only */
+        }
+
+        /* class selector */
+        /* we use the dot thing so 
+        we can give some class for a particular div 
+        ..then all divs with this red class
+          will be .red properties */
+
+        .red {
+            background-color: rgb(248, 142, 142);
+        }
+
+        .green {
+            background-color: rgb(165, 246, 165);
+        }
+
+        /* id selector */
+        /* we use # for this 
+        and in the div.. (anything it can be not only div) 
+        we can use id connection to have its properties*/
+        #green {
+            /* here will give green id properties */
+            background-color: rgb(166, 253, 166);
+        }
+
+        #red {
+            background-color: rgb(255, 140, 140);
+        }
+
+        
+        /* child selector */
+        /* it works for the direct child only 
+        not for the long relation child 
+        just keep a right arrow (greater than)*/
+        div > p{
+            background-color: rgb(241, 241, 126);
+        }
+
+        /* Descendant selector */
+        /* works for descendants just keep a space*/
+        /* need not to be direct child */
+        div p{
+            background-color: rgb(192, 135, 245);
+        }
+
+        /* ..star * .. is for all the elements */
+        *
+        {
+            margin: 0; 
+            padding: 0;
+            /* the gaps in the whole left will become 0000 */
+        }
+        /* pseudo selectors */
+        /* for the links visited */
+        a:visited{
+            color: rgb(252, 147, 252);
+        }
+        /* for the links not visited */
+        a:link{
+            color: rgb(34, 34, 34);
+        }
+        /* actoin taking place on hover */
+        a:hover{
+            background-color: rgb(249, 125, 125);
+        }
+        /* this things will be applied for first p
+        whenever it is a first child */
+        p:first-child
+        {
+            background-color: rgb(141, 89, 89);
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <b>id and class general</b>
+    <div>
+        this is the first div
+    </div>
+    <div>
+        this is the second div
+    </div>
+    <div class="red">
+        this is the text with class red
+    </div>
+    <div id="green">
+        this is the green div
+    </div>
+
+    <br><br><br>
+    <!-- <b>experimenting on id and class</b> -->
+    <b>experimenting on id and class</b>
+
+    <div>
+        this is the first div
+    </div>
+    
+    <div class="green" class="red">
+        this is class experiment
+        <!-- .. when 2 classes given
+        wharever you write first that class is considered -->
+    </div>
+    <div>
+        this is the second div
+    </div>
+
+    <div class="red" , id="green">
+        this is the text with class red <br>
+        class or id <br>
+        <!-- when id and class given
+            id is given more priority 
+        
+        .. dont see what is written first-->
+    </div>
+
+    <div id="red" id="green">
+        2 ids.. id written first given more priority
+        <!-- first id is considered -->
+    </div>
+
+    <!-- notes -->
+    <!-- conclusion -->
+    <!-- ..if you give both class selector and id selector
+        then        id     is only given the most priority
+
+        ..if you give 2 id for the same div then 
+        the id which you
+         link first
+        to the div that is given the most priority -->
+        <br><b>child and descendant</b>
+    <div>
+        <p>this is the para child of div</p>
+    </div>
+    <div>
+        <article>
+            <p>this is the para descendant of div</p>
+        </article>
+    </div>
+    <!-- if there is confusion btw both child and descendant
+        selector then the 
+        child slecrtor considered only if it is written after the descendant selector in the style section -->
+        <!-- latest considered -->
+    <a href="https://www.youtube.com">Go to Youtube</a>
+    <a href="https://www.facebook2.com">Go to facebook2</a>
+</body>
+
+</html>

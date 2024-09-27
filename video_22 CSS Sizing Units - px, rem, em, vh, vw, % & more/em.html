@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>em</title>
+
+    <style>
+        /* this is known as root element */
+        html
+        {
+            /* here whatever you write that happens */
+            font-size: 10px;
+        }
+        .container
+        {
+            border: 2px solid black;
+            background-color: aquamarine;
+            width:80vw;
+            margin: 23px auto;/*here 23 means top bottom and auto for left right*/
+            font-size: 16;
+        }
+        .container p
+        {
+            font-size: 2em;
+            /* comment this and uncomment you will get idea */
+            /* here the size is doubled     x2 it becomes */
+        }
+
+        *
+        {
+            margin: 0;
+            padding: 0;
+        }
+        .box1
+        {
+            border: 2px solid black;
+            background-color: aquamarine;
+            width: 365px;
+            
+        }
+        .box2
+        {
+            border: 2px solid black;
+            background-color: aquamarine;
+            width: 365px;
+            font-size: 2rem;
+            /* here 2x for root properties happen
+            here the 2x of fontsize 10x2= 20px happens */
+            
+        }
+        .mycont
+        {
+            background-color: red;
+            color: yellow;
+            font-size: 22px;
+            width: 100vmin;
+            /* here if minimum one was height then it is vh */
+            /* target is one minimum dimension of divice */
+            /* eg. height of monitor,,,,,, width of phone */
+            /* if minimum one is width then it is vw */
+
+
+
+            /* another one is vmax */
+            /* use when you wanna target for the dimension which is max in the device */
+            /* eg: width of monitor
+                   height of phone */
+            
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">this is the div</div> <br><br>
+    <div class="box2">this is the div</div> <br><br>
+
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, hic.</p></div>
+
+
+
+    <div class="mycont">
+         i am another container
+    </div>
+</body>
+</html>

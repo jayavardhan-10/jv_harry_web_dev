@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css specificity</title>
+    <style>
+        h1
+
+        /*element selector: 1*/
+            {
+            color: aqua;
+        }
+
+        /*class selector specificity: 10*/
+        .cpurple {
+            color: purple;
+        }
+
+        /*class selector specificity: 10*/
+        .cyellow {
+            color: yellow;
+        }
+
+        /*class selector specificity: 10*/
+        .cred {
+            color: red;
+        }
+
+        h1.cyellow
+
+        /*specificity 10+1=11    addition of specificity    */
+            {
+            color: yellowgreen;
+        }
+
+        /* here for same kind of selector
+        the thing which you write at the last will be considered
+        try by taking cred cyellow cpurple to the bottom */
+
+        /* but if you write any INLINE CSS it is highest priority */
+
+
+
+
+
+
+
+
+
+        /* specificity very high   as it is important */
+        .caqua {
+            color: aqua !important;
+            /* whatever happens this will execute for sure */
+        }
+
+
+
+
+
+
+        a.harryclass.rohan-class[href]:hover {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://www.codewithharry.com/tutorial/css-specificity/">harry specificity</a><br><br>
+    <h1 class="cred cyellow cpurple">This is my H1</h1>
+
+
+    <h2 style="color: mediumaquamarine;" class="cred cyellow cpurple">this is h2</h2>
+    <!-- /* but if you write any INLINE CSS it is highest priority */ -->
+
+    <h3 class="cred cyellow caqua">This is my H3</h3>
+
+</body>
+
+</html>
+
+
+
+<!-- 
+    order of specificity is:
+
+    Inline Style > ID Selector > Class or Attribute Selector > Element Selector > Universal Selector
+ -->
+<!-- 
+    Specificity Calculation
+To calculate specificity, assign a value to each part of the selector:
+
+Universal Selector: 0
+Element selectors and pseudo-elements: 1
+Class selectors, attribute selectors, and pseudo-classes: 10
+ID selectors: 100
+Inline styles: 1000
+
+if many are used once
+Then, add up the values of all the parts in the selector.
+ -->
