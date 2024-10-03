@@ -17,9 +17,20 @@ git push --set-upstream origin main
 
 
 
-
 git pull origin main
 
 git pull origin main --allow-unrelated-histories
+
+git push origin main
+
+//all the next steps to be done
+--------------------------------
+
+//adds all the new edited files
+git add .
+
+git commit m "your message"
+
+git status
 
 git push origin main
