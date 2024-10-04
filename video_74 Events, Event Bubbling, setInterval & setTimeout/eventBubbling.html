@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event bubbling</title>
+
+    <style>
+        .container {
+            background-color: aqua;
+            padding: 14px;
+            margin: 14px;
+        }
+
+        .child-container {
+            background-color: pink;
+            padding: 14px;
+            margin: 14px;
+        }
+
+        .child {
+            background-color: rgb(242, 156, 229);
+            padding: 14px;
+            margin: 14px;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>event bubbling</h1>
+
+    <div class="container">
+        <section class="child-container">
+            <div class="child">
+                this is the child
+            </div>
+        </section>
+    </div>
+
+
+    <script>
+
+        //         ### Event bubbling
+        // - here the thing is if there is india ts and srd
+        // - if you click on srd you  also clicked on ts and india
+        // - so all the 3 alerts will pop up 
+
+        // document.querySelector(".container").addEventListener("click", ()=>{
+        //     alert("container was clicked");
+        // })
+        // document.querySelector(".child-container").addEventListener("click", ()=>{
+        //     alert("child-container was clicked");
+        // })
+        // document.querySelector(".child").addEventListener("click", ()=>{
+        //     alert("child was clicked");
+        //})
+
+
+        //     if you wanna stop it then just use event stopeventpropagation
+        // you should take the event in e variable
+        // and do e.stopPropagation()
+        // saying that you want the action only on what you have clicked thats all
+        document.querySelector(".container").addEventListener("click", (e) => {
+            e.stopPropagation();
+            alert("container was clicked");
+        })
+        document.querySelector(".child-container").addEventListener("click", (e) => {
+            e.stopPropagation();
+            alert("child-container was clicked");
+        })
+        document.querySelector(".child").addEventListener("click", (e) => {
+            e.stopPropagation();
+            alert("child was clicked");
+        })
+
+        //taken from video_72
+        function getRandomColor() {
+            let c1 = Math.ceil(0 + Math.random() * 255)
+            let c2 = Math.ceil(0 + Math.random() * 255)
+            let c3 = Math.ceil(0 + Math.random() * 255)
+
+            //use literal to return values
+            return `rgb(${c1},${c2},${c3})`
+            //use ` ` only "" or '' doesnt work in return
+        }
+
+        //setInterval() takes a function in and performs it in specified time interval
+        // takes the time interval in milliseconds
+        setInterval(() => {
+            document.querySelector(".child-container").style.background = getRandomColor()
+        }, 200) //chanes the color for every 1second
+        //DISCO OP
+
+        //you can take its value in a e and clearit in the console
+        // for example
+        let e = setInterval(() => {
+            document.querySelector(".child-container").style.background = getRandomColor()
+        }, 200)
+        //in console jsut do clearInterval(1) // then the DISCO stops simple!!!!!!!
+
+
+
+        //setTimeout()
+        //after you reload, after x time the change happens
+        // thats all
+        setTimeout(() => {
+            document.querySelector(".container").style.background = getRandomColor()
+        }, 1000)
+
+        //clearTimeout()
+        //you can use to stop the thing
+    </script>
+</body>
+
+</html>
