@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dynamic cardbuilder</title>
+
+    <style>
+        .card {
+            display: flex;
+            width: 900px;
+            border: 2px solid black;
+            align-items: center;
+            justify-content: center;
+            margin: 5px;
+        }
+
+        .image img {
+            width: 200px;
+
+        }
+
+        text h1,
+        p {
+            padding: 2px 0;
+        }
+
+        .image {
+            position: relative;
+        }
+
+        .image .capsule {
+            position: absolute;
+            z-index: 10;
+            right: 3px;
+            top: 86px;
+            background: #242020;
+            opacity: 0.9;
+            color: white;
+            padding: 3px;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="image">
+                <img src="https://i.ytimg.com/vi/KB7GzBv5p4Q/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDVLIUfmrskNAha1yNa-7ygsEeNEA"
+                    alt="">
+                <div class="capsule">
+                    31:06
+                </div>
+            </div>
+            <div class="text">
+                <h1>Installing lorem Development Course - Tutorial #1</h1>
+                <p>CodeWithHarry . 727k views . 2 months ago</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
