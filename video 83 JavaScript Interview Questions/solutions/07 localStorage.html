@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07 localStorage</title>
+</head>
+
+<body>
+
+    <button>Add Note</button>
+
+    <div class="note">
+
+    </div>
+    <script>
+
+        function saveNoteToLocalStorage(note)//takes some note as input
+        {
+            localStorage.setItem("note", note);
+        }
+        //if the person isnt clicking
+        let note = localStorage.getItem("note");
+        if(note) // only if note isnt null
+        {
+            document.querySelector(".note").innerHTML = note;
+        }
+        
+        //add the click eventlistener to the button
+        // then the adding function should be run
+        document.querySelector("button").addEventListener("click",()=>{
+            
+            let note = prompt("enter your note: ")
+            saveNoteToLocalStorage(note);
+            document.querySelector(".note").innerHTML = note;
+            // document.write(note);
+        })
+
+    </script>
+</body>
+
+</html>
