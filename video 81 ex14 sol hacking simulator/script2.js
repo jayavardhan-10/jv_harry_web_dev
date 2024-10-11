@@ -25,7 +25,7 @@ const randomdelay = ()=> {
     return new Promise((resolve, reject)=>{
         
         //to create a random number btw 1 to 7
-        // formula:::: start + (end-1)*Math.random()
+        // formula:::: start + (end-start)*Math.random()
         timeout = 1+6*Math.random()
         setTimeout(() => {
             resolve()

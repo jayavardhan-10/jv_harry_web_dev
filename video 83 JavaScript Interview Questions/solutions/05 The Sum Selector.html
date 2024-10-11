@@ -1,0 +1,36 @@
+<!-- The Sum Selector: You are working on a function that should sum all numbers in an array until it encounters a negative number. Write a function that performs this summation. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sum Selector</title>
+</head>
+
+<body>
+    <h1>The Sum Selector</h1>
+
+    <script>
+        let input1 = prompt("enter the array")
+        let arr = input1.split(" ").map(Number);
+        console.log(arr);
+        let sum = 0;
+        for (i = 0; i < arr.length; i++) {
+
+            if (!(arr[i] < 0)) {
+                sum+= arr[i];
+            }
+            else
+            {
+                break;
+            }
+        }
+        console.log(sum);
+        
+
+    </script>
+</body>
+
+</html>

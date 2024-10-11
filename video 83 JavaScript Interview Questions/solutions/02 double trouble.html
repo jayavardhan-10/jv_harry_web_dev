@@ -1,0 +1,32 @@
+<!-- 02 The Double Trouble: You are tasked with writing a function that doubles each element in an array. However, there's a catch: if the array contains consecutive duplicate elements, only double one of them. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>double trouble</title>
+</head>
+
+<body>
+    <h1>double trouble</h1>
+    <script>
+        let userinput = prompt("enter the array element separated by spaces");
+        let arr = userinput.split(" ").map(Number);
+        console.log(arr);
+        let arr2 = [];
+        for (i = 0; i < arr.length; i++) {
+            //if it is not repeated
+            if (!arr2.includes(arr[i])) {
+                arr2.push(arr[i])
+                arr[i] = arr[i] * 2;
+            }
+        }
+        console.log(arr); //[20, 40, 60, 10, 20, 100, 10]
+        console.log(arr2); //[10, 20, 30, 50]
+
+    </script>
+</body>
+
+</html>
