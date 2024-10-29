@@ -48,3 +48,35 @@
 .p-1{
     padding: 10px;
 }
+
+
+
+
+
+/* FOR THE SCROLL BAR THOROUGH OUT THE WEBSITE */
+/* For Chrome, Edge, and Safari */
+::-webkit-scrollbar {
+    width: 10px;  /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #1e1e1e;  /* Dark background for the track */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #555;  /* Dark gray color for the thumb */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #888;  /* Lighter gray on hover */
+}
+
+/* For Firefox */
+* {
+    scrollbar-width: thin;           /* Makes the scrollbar thinner */
+    scrollbar-color: #555 #1e1e1e;   /* Thumb color, then track color */
+}
+
+/* FOR THE SCROLL BAR THOROUGH OUT THE WEBSITE */
