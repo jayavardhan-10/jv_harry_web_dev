@@ -27,6 +27,7 @@ body{
 {
     /* assuming right part is 75 */
     width: 75vw;
+    position: relative;
 }
 
 .home{
@@ -148,17 +149,60 @@ body{
     transition: all 1s ease-out;
 }
 
+.buttons > *{
+    margin: 0 12px;
+}
+
 .signupbtn{
     font-weight: bold;
-    background-color: black;
-    color: white;
+    /* background-color: black; */
+    color:rgb(131, 131, 131);
+    background-color: rgb(34, 34, 34);
+    font-weight: bold;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 .signupbtn:hover{
-    font-size: 1.1rem;
-    color: grey;
+    font-size: 17px;
+    color: white;
+    
+    
 }
 
 .loginbtn{
+    background-color: white;
+    border-radius: 21px;
+    color: black;
+    /* font-weight: bold; */
+    padding: 10px;
+    width: 79px;
+    cursor: pointer;
+    font-size: 16px;
+}
 
+.loginbtn:hover{
+    
+    font-weight: bold;
+    
+    width: 80px;
+    font-size: 17px;
+}
+
+.playbar{
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(144, 255, 144);
+    width: 100%;
+    padding: 12px;
+}
+
+
+.songbuttons
+{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
 }
