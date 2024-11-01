@@ -16,7 +16,7 @@
 
         <div class="left">
             <div class="home bg-grey rounded m-1 p-1">
-                <div class="logo"><img src="logo.svg" class="invert" alt="logo"></div>
+                <div class="logo"><img id="spotifylogo" src="logo.svg" class="invert" alt="logo"></div>
                 <ul>
                     <li><img src="home.svg" class="invert" alt="home">Home</li>
                     <li><img src="search.svg" class="invert" alt="search">Search</li>
@@ -37,7 +37,7 @@
 
                     <ul>
                         <!-- <li></li> -->
-                        
+
                         
                        </ul>
                </div>
@@ -107,18 +107,22 @@
                 <!-- container ends here -->
                 
                 <div class="playbar">
-                    <div class="songinfo">
+                    <div class="seekbar">
+                        <div class="circle">
 
+                        </div>
                     </div>
-                    
-                    <div class="songbuttons">
-                            <img src="prevsong.svg" alt="">
-                            <img src="play.svg" alt="">
-                            <img src="nextsong.svg" alt="">
-                    </div>
+                    <div class="abovebar">
 
-                    <div class="songtime">
-
+                        <div class="songinfo"></div>
+                        
+                        <div class="songbuttons">
+                            <img id="previous" src="prevsong.svg" alt="">
+                            <img id="play" src="play.svg" alt="">
+                            <img id="next" src="nextsong.svg" alt="">
+                        </div>
+                        
+                        <div class="songtime"></div>
                     </div>
                 </div>
             </div>

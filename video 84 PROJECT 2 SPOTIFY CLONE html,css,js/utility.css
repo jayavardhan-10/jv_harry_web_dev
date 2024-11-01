@@ -1,5 +1,9 @@
 /* UTILITY CLASSES::: classes of properties whcih i can use anywhere */
 
+#spotifylogo{
+    width: 60px;
+}
+
 .border{
     border: 2px solid red;
     margin: 3px;
