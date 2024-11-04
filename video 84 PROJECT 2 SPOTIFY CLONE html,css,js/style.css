@@ -8,7 +8,9 @@
     font-family: "Roboto", sans-serif;
 }
 
-
+.close{
+    display: none;
+}
 
 body{
     background-color: black;
@@ -103,15 +105,19 @@ body{
     padding: 16px;
 
 }
+.spotifyPlaylists h1{
+    padding: 16px;
+
+}
 
 .cardContainer{
     margin: 30px;
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
-
+    /* justify-content: center; on in mobile phones this is good */
     max-height: 70vh;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .card{
@@ -200,7 +206,7 @@ body{
     background-color: #dad5d5;
     border-radius: 10px;
     width: 70vw;
-    height: 40px;
+    min-height: 40px;
     padding: 12px;
 }
 
@@ -217,6 +223,18 @@ body{
     overflow: auto;
 
     margin-bottom: 44px;
+}
+
+.hamburger{
+    width: 40px;
+    display: none;
+}
+
+.hamburgerContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
 }
 
 .songList ul{
@@ -241,6 +259,10 @@ body{
 .songList .info{
     font-size: 13px;
     width: 344px;
+}
+
+.info div{
+    word-break: break-all;
 }
 
 .playnow{
@@ -287,13 +309,159 @@ body{
     cursor: pointer;
 }
 
-.songinfo, .songtime{
+.timevol{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.songinfo{
     color: black;
     padding: 0px 12px;
+    width: 400px;
 }
+.songtime{
+    color: black;
+    padding: 0px 12px;
+    width: 125px;
+}
+
+.volume{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+/* .volume:hover::after{
+    content:"sfsjdfkl" ;
+} */
 
 .abovebar{
     display: flex;
 
     justify-content: space-between;
+    margin: 20px 0;
+}
+
+
+@media (max-width: 1200px){
+
+
+
+    .left{
+        /* background-color: red; */
+        position: absolute;
+        left: -125%;
+        transition: all .3s;
+        z-index: 1;
+        width: 370px;
+        background-color: black;
+        padding: 0;
+
+    }
+
+    .left .close{
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        width: 37px;
+    }
+
+
+
+    .left .close .closeImage{
+        width: 35px;
+    }
+
+
+    .timevol{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        gap: 13px;
+
+    }
+    .right{
+        width: 100vw;
+    }
+
+    
+    .playbar{
+        width: calc(100vw - 60px);
+    }
+
+    .seekbar{
+        width: calc(100vw - 70px);
+    }
+
+   
+    .hamburger{
+        display: block;
+    }
+
+
+    .abovebar{
+        flex-direction: column;
+        gap: 13px;
+        align-items: center;
+    }
+    
+
+    /*
+    THERE IS A COMMENT ISSUE
+    CHANGE THE COMMENTS.. IN THE DOWN
+
+    THIS IS ABOUT THE STACKED VERSION .abovebar things for smaller screens
+    .abovebar {
+        flex-wrap: wrap;
+    }
+
+    .songinfo, .songbuttons, .songtime {
+        flex-basis: 100%; 
+        Full width on smaller screens
+        text-align: center;
+         Center-align for better mobile view
+        margin-top: 5px;
+         Optional: add space between lines
+    }
+
+    .songbuttons {
+        justify-content: center;
+         Center buttons on small screens
+    }  */
+
+    .right{
+        margin: 0;
+    }
+
+    .card{
+        width: 44vw;
+    }
+
+    .cardContainer{
+        margin: 0px;
+        justify-content: center;
+    }
+
+    .close{
+        display: block;
+    }
+
+    .songinfo{
+        width: auto;
+    }
+
+    .songtime{
+        width: auto;
+    }
+    
+}
+
+
+@media (max-width: 500px){
+    .card{
+        width: 95vw;
+    }
 }
