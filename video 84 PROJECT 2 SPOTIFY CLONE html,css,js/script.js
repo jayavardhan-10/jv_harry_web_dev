@@ -82,7 +82,7 @@ async function getSongs(folder) {
     return songs;
 }
 
-// playMusic function
+//playMusic function
 
 const playMusic = (track, pause = false) => {
 
