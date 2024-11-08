@@ -151,18 +151,24 @@ body{
 }
 
 .play{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 28px;
     height: 28px;
     background-color: #1fdf64;
     border-radius: 50%;
     padding: 4px;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
-    top: 171px;
-    right: 30px;
+    /* top: 171px;
+    right: 30px; */
+
+    /* bottom: 88px;
+    right: 17px; */
+
+    bottom: 120px;
+    right: 25px;
+    
 
     opacity: var(--a);
     transition: all 1s ease-out;
@@ -364,6 +370,12 @@ body{
 }
 
 
+@media (max-width: 1362px){
+    .play{
+        bottom: 97px;
+    right: 25px;
+    }
+}
 @media (max-width: 1200px){
 
 
@@ -377,6 +389,10 @@ body{
         width: 370px;
         background-color: black;
         padding: 0;
+        height: 100vh;
+        
+        position: fixed;
+        top: 0;
 
     }
 
@@ -407,7 +423,17 @@ body{
         width: 100vw;
     }
 
-    
+    /* .card{
+        position: relative;
+    }
+
+    .play{
+        position: absolute;
+        bottom: 53px;
+        top: 563px;
+        right: 35px;
+    }
+     */
     .playbar{
         width: calc(100vw - 60px);
     }
@@ -495,8 +521,12 @@ body{
     }
     .cardContainer{
     
-        max-height: 136vw;
-        margin-bottom: 60vw;
+        /* max-height: 136vw;
+        margin-bottom: 60vw; */
+
+        max-height: unset;
+        overflow-y: unset;
+        margin-bottom: 30vh;
         
     }
 
@@ -506,5 +536,26 @@ body{
 
     .playbar{
         right: 18.5px;
+        bottom: 7px;
+    }
+
+    .header{
+        padding: 7px;
+    }
+
+    .abovebar{
+        margin-bottom: 25px;
+    }
+    .seekbar{
+        margin-bottom: 20px;
+    }
+
+    .library{
+        height: 85vh;
+    }
+
+    .left{
+        
+        width: 100vw;   
     }
 }
