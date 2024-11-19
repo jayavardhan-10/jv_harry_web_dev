@@ -57,8 +57,6 @@ function App() {
         </div>
       })}
 
-
-
       <div className="card">
         <button onClick={() => setshowbtn(!showbtn)}>
           show/notshow
