@@ -37,8 +37,8 @@ function App() {
 
       {/* <input type="text" name='email'  value={form.email} onChange={handleChange}/>
       <input type="text" name='phone' value={form.phone} onChange={handleChange}/> */}
-      <input type="text" name='email'  value={form.email?form.email=""} onChange={handleChange}/>
-      <input type="text" name='phone' value={form.phone?form.phone=""} onChange={handleChange}/>
+      <input type="text" name='email'  value={form.email?form.email:""} onChange={handleChange}/>
+      <input type="text" name='phone' value={form.phone?form.phone:""} onChange={handleChange}/>
     </>
   )
 }
