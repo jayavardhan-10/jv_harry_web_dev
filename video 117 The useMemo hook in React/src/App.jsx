@@ -9,7 +9,7 @@ const nums = new Array(30_000_000).fill(0).map((_,i)=>{
     index:i,
     isMagical: i===29_000_000
   }
-})
+})            
 function App() {
   const [count, setCount] = useState(0)
   const [numbers, setNumbers] = useState(nums)
