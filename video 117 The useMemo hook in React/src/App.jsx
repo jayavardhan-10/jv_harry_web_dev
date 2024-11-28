@@ -17,7 +17,7 @@ function App() {
   // const magical = numbers.find(item=>item.isMagical===true) //expnesive computation
   // const magical = useMemo(() => numbers.find(item=>item.isMagical===true), [])
   // IT DOES MEMOIZE doesnt claculate again again
-  // now the computation will be fast no tension
+  // now the computation will be fast no tension            
 
   //if the numbers are changing -- only at changing time calculate again
   const magical = useMemo(() => numbers.find(item=>item.isMagical===true), [numbers])
@@ -28,6 +28,7 @@ function App() {
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
+        
         <a href="https://react.dev" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
