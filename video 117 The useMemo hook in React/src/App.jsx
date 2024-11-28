@@ -22,17 +22,17 @@ function App() {
   //if the numbers are changing -- only at changing time calculate again
   const magical = useMemo(() => numbers.find(item=>item.isMagical===true), [numbers])
   return (
-    <>
+    <>   
       <div>
         <span>Magical number is {magical.index}</span>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        
+        </a>  
+
         <a href="https://react.dev" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
-      </div>
+      </div>  
       <h1>Vite + React</h1>
       <div className="card">
         <button onClick={() => {
