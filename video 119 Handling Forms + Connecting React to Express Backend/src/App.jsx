@@ -21,6 +21,7 @@ function App() {
           <input placeholder='password' {...register("password")} type="password" /> <br />
           <input type="submit" value="Submit" />
         </form>
+        
       </div>
     </>
   )
