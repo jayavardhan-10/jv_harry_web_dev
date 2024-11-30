@@ -15,7 +15,9 @@ function App() {
     <>
       <div className="container">
         <form action={handleSubmit(onSubmit)}>
-          <input placeholder='username ' {...register("username"),{ required: true, minLength:{value:3, message:"Min length is 3"} , maxLength:{value:10, message:"Max length is 10"}}  } type="text"/> <br />
+          <input placeholder='username ' {...register("username",{ required: true, minLength:{value:3, message:"Min length is 3"} , maxLength:{value:10, message:"Max length is 10"}} ) } type="text"/> 
+          {errors.username && <div>There is error</div> }
+          <br />
           <input placeholder='password' {...register("password")} type="password" /> <br />
           <input type="submit" value="Submit" />
         </form>
