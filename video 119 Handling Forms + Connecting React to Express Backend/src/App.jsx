@@ -13,6 +13,8 @@ function App() {
 
   return (
     <>
+
+    
       <div className="container">
         <form action={handleSubmit(onSubmit)}>
           <input placeholder='username ' {...register("username",{ required: true, minLength:{value:3, message:"Min length is 3"} , maxLength:{value:10, message:"Max length is 10"}} ) } type="text"/> 
