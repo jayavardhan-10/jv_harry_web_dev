@@ -11,7 +11,7 @@ function App() {
     return new Promise((resolve, reject)=>{
       setTimeout(() => {
         resolve();
-      }, d*1000);
+      }, d*1000);    
     })   
   }
   const onSubmit = async(data) => {
