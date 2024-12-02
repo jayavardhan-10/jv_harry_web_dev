@@ -12,7 +12,7 @@ function App() {
       setTimeout(() => {
         resolve();
       }, d*1000);
-    })
+    })   
   }
   const onSubmit = async(data) => {
     // await delay(2); //simulating network delay
