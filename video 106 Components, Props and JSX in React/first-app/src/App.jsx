@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>    
-      <Navbar/>
+      <Navbar/>      
       
       <div className="cards">
         <Card title="card 1" description="card 1 desc" />
