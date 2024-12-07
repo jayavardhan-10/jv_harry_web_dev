@@ -16,7 +16,7 @@ function App() {
         <Card title="card 3" description="card 3 desc" />
         <Card title="card 4" description="card 4 desc" />
       </div>
-      <Footer/>
+      <Footer/>      
     </>
   )
 }
