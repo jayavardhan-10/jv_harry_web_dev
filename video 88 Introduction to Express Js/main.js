@@ -5,7 +5,9 @@ const app = express()
 const port = 3000
 
 
-
+//So these files will be public and can be viewed by the users also. 
+//To be used by the users, keep the things in the public folder. 
+app.use(express.static('public'))
  
 
 // app.get or app.post or app.put or app.delete (path,handler)
