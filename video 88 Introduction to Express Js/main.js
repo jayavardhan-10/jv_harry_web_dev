@@ -5,6 +5,9 @@ const app = express()
 const port = 3000
 
 
+
+ 
+
 // app.get or app.post or app.put or app.delete (path,handler)
 app.get('/', (req, res) => {
   res.send('Hello World!    dsfdasf')
@@ -28,7 +31,11 @@ app.get('/blog', (req, res) => {
 
 app.get('/blog/:slug', (req, res) => {
   //logic to fetch {slug} from the dB
+
+  //for url: // For URL: http://localhost:3000/blog/intro-to-padosi mode=dark&region=in
   console.log(req.params) //will output {slug: 'intro-to-pinky}
+
+  console.log(req.query ) //{ mode: 'dark',region :'in' )
   res.send(`hello ${req.params.slug}`)
 })
 
